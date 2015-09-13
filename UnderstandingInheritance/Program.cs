@@ -17,6 +17,16 @@ namespace UnderstandingInheritance
             myCar.Color = "Red";
 
             printCarDetail(myCar);
+            
+
+            Truck myTruck = new Truck();
+            myTruck.Make = "Ford";
+            myTruck.Model = "F950";
+            myTruck.Year = 2006;
+            myTruck.Color = "Purple";
+            myTruck.TowingCapacity = 1500;
+
+            printCarDetail(myTruck);
 
             Console.ReadLine();
 
@@ -24,7 +34,7 @@ namespace UnderstandingInheritance
         }
         private static void printCarDetail(Car car)
         {
-            Console.WriteLine("Here are the care details: {0}",
+            Console.WriteLine("Here are the car details: {0}",
                 car.FormatMe());
         }
     }
@@ -44,5 +54,11 @@ namespace UnderstandingInheritance
                 this.Color,
                 this.Year);
         }
+    }
+
+    class Truck : Car
+    {
+        public int TowingCapacity { get; set; }
+
     }
 }
